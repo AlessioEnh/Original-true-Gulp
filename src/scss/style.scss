@@ -244,7 +244,7 @@ h2 {
 
 h3 {
 	font-family: $font3family;
-	font-size: $fontSizeSubH3;
+	font-size: $fontSizeH3;
 	color: $TitleColorDark;
 	line-height: 3.2rem;
 	letter-spacing: 0.1px;
@@ -345,7 +345,7 @@ body {
 	flex-direction: column;
 	align-content: center;
 	align-items: center;
-	color: $TextColor;
+	color: $TextColorLight;
 	// background-color: grey;
 	background-color: #000000;
 
