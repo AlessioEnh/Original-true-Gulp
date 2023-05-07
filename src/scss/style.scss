@@ -1,0 +1,444 @@
+// Сброс css ===========================================
+@import "reset";
+// Сброс css ===========================================
+
+
+// Миксины ===========================================
+// @import "mymixins";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+
+	@font-face {
+	font-family: $font_name;
+	font-display: swap;
+	src: url("../assets/fonts/#{$file_name}.woff") format("woff"), url("../assets/fonts/#{$file_name}.woff2") format("woff2");
+	font-weight: #{$weight};
+	font-style: #{$style};
+	}
+}
+// Миксины ===========================================
+
+
+// Иконки ============================================
+
+
+// Иконки ============================================
+
+
+// Шрифты =======================================================================
+	// ***********************************
+	// Семейство шрифтов font-family
+	// font-weight - толщина шрифта (жирный , тонкий,... или 100 400 500 ...)
+	// font-size - размер шрифта 
+	// font-style - курсив (italic, normal) 
+	// 
+	// 	Установить:
+	// 	1)Акцентирующий шрифт тектса на всю страницу
+	// 	2)Шрифт заголовков
+	// 	3)Шрифт подзаголовков
+	//		
+	// 	Размер шрифта:
+	// 	1)Текст
+	// 	2)Заголовки
+	// 	3)Подзаголовки
+	// 	2)Ссылки
+	// 	2)Кнопки
+
+	// 	Цвета шрифтов:
+	// 	1)Текст
+	// ***********************************
+
+// ************************************Подключение шрифтов
+@import "fonts"; //Пути к кшрифтам появятся после копиляции
+
+// Шрифт по умолчанию (акцентированный)
+$fontfamily: 'Montserrat-Regular', sans-serif;
+$font-weight: 400;
+$fontSize: 10px; // Базовый шрифт всего сайта
+$font-style: normal;
+// Шрифт по умолчанию (акцентированный)
+
+// Шрифт  
+$font2family: 'Montserrat-Medium', sans-serif;
+$font2-weight: 500;
+$font2Size: 10px; 
+$font2-style: normal;
+// Шрифт 2
+
+// Шрифт 3
+$font3family: 'Montserrat-Bold', sans-serif;
+$font3-weight: 700;
+$font3Size: 10px;
+$font3-style: normal;
+// Шрифт 3
+
+// Шрифт 4
+$font4family: 'Montserrat-SemiBold', sans-serif;
+$font4-weight: 600;
+$font4Size: 10px;
+$font4-style: normal;
+// Шрифт 4
+
+// Шрифт 5
+$font5family: 'Montserrat-ExtraBold', sans-serif;
+$font5-weight: 800;
+$font5Size: 10px;
+$font5-style: normal;
+// Шрифт 5
+
+// Шрифт 6
+$font6family: 'Roboto-Regular', sans-serif;
+$font6-weight: 400;
+$font6Size: 10px;
+$font6-style: normal;
+// Шрифт 6
+
+// ************************************Размер шрифтов
+
+// Текст (paragraph)
+$fontSizeText: 1.4rem;
+
+// Главный Заголовок (h1)
+$fontSizeMainTitle: 5.8rem;
+
+// Заголовок (h2)
+$fontSizeTitle: 5rem;
+
+// Подзаголовки (h3)
+$fontSizeH3: 2.4rem;
+
+// h4
+$fontSizeH4: 2rem;
+
+// h5
+$fontSizeH5: 1.6rem;
+
+// h6
+$fontSizeH6: 1.4rem;
+
+// Ссылки
+$fontSizelink: 1.4rem;
+
+// Текст кнопки
+$fontSizeButton: 1.4rem;
+
+// пункты в Меню
+$fontSizeliskMenu: 2rem;
+
+
+
+// ************************************Цвета Шрифтов
+// Текст и Заголовки
+$TextColorSecond: #737373;
+$TextColorDark: #252B42;
+$TextColorLight: #FFFFFF; // светлый шрифта на темном фоне
+
+$TitleColorDark: #252B42;
+$TitleColorLight: #FFFFFF; // светлый шрифт заголовка на темном фоне
+
+// Фон
+$BackgroundColorGrey1: #FAFAFA;
+$BackgroundColorGrey2: #ECECEC;
+$BackgroundColorDark: #252B42; // Темный фон
+$BackgroundColorLight: #FFFFFF; // Светлый фон
+$BackgroundColorGradient: linear-gradient(90deg, rgba(215,20,137,1) 0%, rgba(0,71,136,1) 100%);
+
+$PrimaryColor: #23A6F0; // Акцентированый(фирменный)
+$SecondColor: #40BB15;
+$SecondColor2: #3C403D;
+
+
+// Ссылки
+$linkColorLight: #FFFFFF;
+$linkColorDark: #252B42; // темный шрифта на белом фоне
+// $linkColorActive: aquamarine;
+
+// Кнопки
+$ColorButton: #23A6F0;
+// $ColorButton2: linear-gradient(90deg, rgba(94,55,138,1) 0%, rgba(124,106,250,1) 100%);
+// $ColorButton3: #fffafa33;
+$TextButton: #FFFFFF;
+// $linkButtonActive: #dba4fc;
+
+// Уведомления
+$HoverColor: #2A7CC7;
+$DisableEleventColor: #8EC2F2; 
+$MutedColor: #BDBDBD;
+$SuccessColor: #2DC071;
+$AlertColor: #E77C40;
+$DangerColor: #E74040;
+
+// Шрифты =======================================================================
+
+
+
+// Брейкпоинты***************************************
+
+// Desktop	1600 - 1920 и больше
+$DesktopMinWidth: 1599.99px;
+$DesktopMaxWidth: 1919.98px;
+
+// Laptop	1200 - 1600
+$LaptopMinWidth: 1199.99px;
+$LaptopMaxWidth: 1599.98px;
+
+// Tablet	812 - 1200
+$TabletMinWidth: 811.99px;
+$TabletMaxWidth: 1199.98px;
+
+// Mobile	320 - 812
+$MobileMinWidth: 320px;
+$MobileMaxWidth: 811.98px;
+
+// ####################################################################################
+// ####################################################################################
+// ####################################################################################
+
+html{
+	font-family: $fontfamily;
+	font-weight: $font-weight;
+	font-size: $fontSize;
+}
+
+a {
+	font-family: $font4family;
+	font-size: $fontSizelink;
+	color: $linkColorDark;
+	line-height: 2.4;
+	letter-spacing: 0.2px;
+
+	&:hover {
+		color: $HoverColor
+	}
+}
+
+p {
+	color: $TextColorDark;
+	font-size: $fontSizeText;
+	line-height: 2rem;
+	letter-spacing: 0.2px;
+}
+
+span {
+	color: $TextColorDark;
+	font-size: $fontSizeText;
+	line-height: 2rem;
+	letter-spacing: 0.2px;
+}
+
+h1 {
+	font-family: $font5family;
+	font-size: $fontSizeMainTitle;
+	color: $TextColorLight;
+	line-height: 8rem;
+	letter-spacing: 0.2px;
+}
+
+h2 {
+	color: $TitleColorDark;
+	font-size: $fontSizeTitle;
+	font-family: $font3family;
+	line-height: 5.7rem;
+	letter-spacing: 0.2px;
+}
+
+h3 {
+	font-family: $font3family;
+	font-size: $fontSizeSubH3;
+	color: $TitleColorDark;
+	line-height: 3.2rem;
+	letter-spacing: 0.1px;
+}
+
+h4 {
+	font-family: $font2family;
+	font-size: $fontSizeH4;
+	color: $TitleColorDark;
+	line-height: 3rem;
+	letter-spacing: 0.2px;
+}
+
+h5 {
+	font-family: $font3family;
+	font-size: $fontSizeH5;
+	color: $TitleColorDark;
+	line-height: 2.4rem;
+	letter-spacing: 0.1px;
+}
+
+h6 {
+	font-family: $font4family;
+	font-size: $fontSizeH6;
+	color: $TitleColorDark;
+	line-height: 2.4rem;
+	letter-spacing: 0.2px;
+}
+
+img {
+	width: auto;
+}
+
+input {
+	background-color: #F9F9F9;
+	box-sizing: border-box;
+	border-radius: 0.5rem;
+	border: 1px solid #E6E6E6;
+	padding: 1.1rem 2.1rem;
+	outline: none;
+
+	&::placeholder {
+		color: $TextColorSecond;
+		font-size: 14px;
+	}
+}
+
+select {
+	display: block;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-color: #F9F9F9;
+	box-sizing: border-box;
+	border-radius: 0.5rem;
+	border: 1px solid #E6E6E6;
+	padding: 1.1rem 2.1rem;
+	font-size: 14px;
+	outline: none;
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='16' width='16' viewBox='0 0 35 35'><path d='M17.297 13.703L5.703 25.297a.99.99 0 01-1.406 0l-2.594-2.594a.99.99 0 010-1.406L10 13 1.703 4.703a.99.99 0 010-1.406L4.297.703a.99.99 0 011.406 0l11.594 11.594a.99.99 0 010 1.406z' fill='%23134578' transform='rotate(90 12 12)' /></svg>");
+	background-size: 0.95em auto, 100%;
+	background-repeat: no-repeat;
+	background-position: right 0.7rem top 50%, 0 0;
+}
+
+option {
+	box-sizing: border-box;
+	background-color: #F9F9F9;
+	border: 1px solid $BackgroundColorLight;
+	border-radius: 0.5rem;
+	counter-increment: cnt;
+}
+
+button {
+	// width: 18.3rem;
+	// height: 4.4rem;
+	// border: none;
+	// border-radius: 5rem;
+	letter-spacing: 0.2px;
+	line-height: 2.2rem;
+	font-size: $fontSizeButton;
+	background-image: $ColorButton;
+	color: $TextButton;
+	cursor: pointer;
+}
+
+button:hover {
+	color: $TextButton !important;
+	background: $HoverColor;
+}
+
+
+// #######################################################################
+// #########################		Blocks			##########################
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	color: $TextColor;
+	// background-color: grey;
+	background-color: #000000;
+
+
+	header {
+		// width: clamp(1344px, 100vw ,1920px);
+		max-width: 1920px;
+		width: 100%;
+	}
+
+	main {
+
+	}
+
+	
+	section {
+		max-width: 1920px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-grow: 1;
+
+	}
+	
+	footer {
+		// width: clamp(1200px, 100% ,1920px);
+		max-width: 1920px;
+		width: 100%;
+		
+		// padding: 0 clamp(1.375rem, 1.2rem + 0.89vw, 2rem);
+	}
+}
+
+// #######################################################################
+// #########################		Wrapper			##########################
+
+.wrapper {
+	// width: clamp(1296px, 100vw ,1920px);
+	// width: 1296px;
+	// margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	padding: 0 24px 0  24px;
+	box-sizing: border-box;
+
+
+}
+// ************************************************************************
+// ************************************************************************
+// ************************************************************************
+// ************************************************************************
+// ************************************************************************
+// ************************************************************************
+// ************************************************************************
+// ************************************************************************
+// ************************************************************************
+// ************************************************************************
+// ************************************************************************
+//************************** Laptop - adaptive ****************************
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+	and (min-device-width: $LaptopMinWidth) 
+	and (max-device-width: $LaptopMaxWidth) 
+	and (-webkit-min-device-pixel-ratio: 1) {
+
+	}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+	and (min-device-width: $LaptopMinWidth) 
+	and (max-device-width: $LaptopMaxWidth) 
+	and (-webkit-min-device-pixel-ratio: 2)
+	and (min-resolution: 192dpi) { 
+
+}
+
+//************************** Tablet - adaptive ***************************
+
+@media screen 
+	and (min-device-width: $TabletMinWidth) 
+	and (max-device-width: $TabletMaxWidth)
+	and (-webkit-min-device-pixel-ratio: 2) {
+
+
+}
+
+//************************** Mobile - adaptive ***************************
+
+@media screen 
+	and (min-device-width: $MobileMinWidth) 
+	and (max-device-width: $MobileMaxWidth)
+	and (-webkit-min-device-pixel-ratio: 2) {
+
+
+}
